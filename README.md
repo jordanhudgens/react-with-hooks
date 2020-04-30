@@ -1,5 +1,3 @@
-# React/Redux/Router Starter Project
+# Dissecting React course with Hooks
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+> For the Bottega Code School
