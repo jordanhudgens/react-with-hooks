@@ -1,5 +1,5 @@
 {
-  "name": "react-router",
+  "name": "dissecting-react-hooks-portfolio",
   "version": "1.0.0",
   "description": "Basic skeleton codebase for React/Router applications.",
   "scripts": {
