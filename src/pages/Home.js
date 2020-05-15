@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/shared/NavBar";
+import DashboardLayout from "../components/layouts/DashboardLayout";
 
 export default () => {
   const dynamicBackgroundColor = "black";
@@ -11,13 +12,11 @@ export default () => {
   };
 
   return (
-    <div className="app">
-      <NavBar />
+    <DashboardLayout>
       <h1>DevCamp React Starter</h1>
       <h2>React + React Router</h2>
 
       <div style={styles}>Testing styles</div>
-      <NavBar />
-    </div>
+    </DashboardLayout>
   );
 };

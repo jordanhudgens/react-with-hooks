@@ -1,10 +1,11 @@
 import React from "react";
+import DashboardLayout from "../components/layouts/DashboardLayout";
 
 export default () => {
   return (
-    <div>
+    <DashboardLayout>
       <h1>About</h1>
       <div>Some content</div>
-    </div>
+    </DashboardLayout>
   );
 };

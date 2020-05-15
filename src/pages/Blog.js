@@ -1,11 +1,6 @@
 import React from "react";
-import NavBar from "../components/shared/NavBar";
+import DashboardLayout from "../components/layouts/DashboardLayout";
 
 export default () => {
-  return (
-    <div>
-      <NavBar />
-      Blog
-    </div>
-  );
+  return <DashboardLayout>Blog</DashboardLayout>;
 };
