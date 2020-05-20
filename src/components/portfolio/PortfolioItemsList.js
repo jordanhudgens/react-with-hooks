@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import PortfolioItem from "./PortfolioItem";
 
+const API_URL =
+  "https://reactportfolio.devcamp.space/portfolio/portfolio_items";
+
 export default () => {
-  const items = [
-    { id: 1, title: "Quip", description: "Toothbrush company" },
-    { id: 2, title: "Eventbrite", description: "Event planning" },
-    { id: 3, title: "DevCamp", description: "Coding LMS" },
-  ];
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    getPortfolioItems();
+  }, []);
+
+  const getPortfolioItems = () => {
+    axios.get(API_URL).then((response) => {
+      setItems(response.data.portfolio_items);
+    });
+  };
 
   const itemsRenderer = () => {
     return items.map((item) => <PortfolioItem key={item.id} item={item} />);

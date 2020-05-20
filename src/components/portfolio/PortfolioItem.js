@@ -1,10 +1,10 @@
 import React from "react";
 
 export default (props) => {
-  const { title, description } = props.item;
+  const { name, description } = props.item;
   return (
     <div>
-      <div>{title}</div>
+      <div>{name}</div>
       <div>{description}</div>
     </div>
   );
