@@ -23,6 +23,7 @@ export default () => {
       .then((response) => {
         if (response.data.jwt) {
           console.log("JWT", response.data.jwt);
+          localStorage.setItem("devcamp_space_secure_token", response.data.jwt);
         } else {
           setErrorText("There was an error logging you in, please try again");
         }
