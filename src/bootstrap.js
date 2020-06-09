@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import App from "./components/app";
+import AdminProvider from "./providers/AdminProvider";
 
 import "./style/main.scss";
 
 function main() {
   ReactDOM.render(
-    <BrowserRouter>
+    <AdminProvider>
       <App />
-    </BrowserRouter>,
+    </AdminProvider>,
     document.querySelector(".app-wrapper")
   );
 }
