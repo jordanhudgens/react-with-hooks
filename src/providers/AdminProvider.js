@@ -32,6 +32,7 @@ export default (props) => {
 
   const stateValue = {
     isLoggedIn,
+    checkLogin,
   };
 
   return (
