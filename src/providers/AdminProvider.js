@@ -16,6 +16,11 @@ export default (props) => {
     }
   }, []);
 
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("devcamp_space_secure_token");
+  };
+
   const checkLogin = (token) => {
     axios
       .get(API_URL, { headers: { Authorization: `Bearer ${token}` } })
@@ -33,6 +38,7 @@ export default (props) => {
   const stateValue = {
     isLoggedIn,
     checkLogin,
+    logout,
   };
 
   return (
