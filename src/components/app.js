@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 
-import router from "../utils/router";
+import AdminContext from "../contexts/AdminContext";
+import { routes, adminRoutes } from "../utils/router";
 
 const App = () => {
+  const { isLoggedIn } = useContext(AdminContext);
+
   return (
     <div>
       <BrowserRouter>
-        <Switch>{router}</Switch>
+        <Switch>
+          {routes}
+
+          {isLoggedIn ? adminRoutes : null}
+        </Switch>
       </BrowserRouter>
     </div>
   );
