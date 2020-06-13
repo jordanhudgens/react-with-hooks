@@ -30,5 +30,5 @@ export default () => {
     return <Loader />;
   }
 
-  return <div>{itemsRenderer()}</div>;
+  return <div className="portfolio-items-wrapper">{itemsRenderer()}</div>;
 };
