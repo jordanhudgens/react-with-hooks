@@ -1,15 +1,38 @@
-import React from "react";
-
-// <pre>{JSON.stringify(props.item, null, 2)}</pre>
+import React, { useState } from "react";
 
 export default (props) => {
-  const { name, description, thumb_image_url, logo_url } = props.item;
+  const [portfolioItemClass, setPortfolioItemClass] = useState("");
+
+  const { description, thumb_image_url, logo_url } = props.item;
+
+  const handleMouseEnter = () => {
+    setPortfolioItemClass("darken-img");
+  };
+
+  const handleMouseLeave = () => {
+    setPortfolioItemClass("");
+  };
+
   return (
-    <div>
-      <div>{name}</div>
-      <div>{description}</div>
-      <img src={thumb_image_url} style={{ width: "100%" }} />
-      <img src={logo_url} style={{ width: "100%" }} />
+    <div
+      className="portfolio-item-wrapper"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        className={`portfolio-img-background ${portfolioItemClass}`}
+        style={{
+          backgroundImage: "url(" + thumb_image_url + ")",
+        }}
+      />
+
+      <div className="img-text-wrapper">
+        <div className="logo-wrapper">
+          <img src={logo_url} />
+        </div>
+
+        <div className="subtitle">{description}</div>
+      </div>
     </div>
   );
 };

@@ -19,6 +19,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100%;
       text-align: center;
       padding: 0px 100px;
@@ -40,4 +41,9 @@
       margin-bottom: 20px;
     }
   }
+}
+
+.darken-img {
+  transition: 1s;
+  filter: brightness(10%);
 }
