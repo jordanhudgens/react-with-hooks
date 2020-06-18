@@ -9,15 +9,29 @@ export default () => {
   const { logout, isLoggedIn } = useContext(AdminContext);
 
   return (
-    <div>
-      <img src={logo} />
-      <div>Jordan Hudgens</div>
+    <div className="nav-wrapper">
+      <div className="left-side">
+        <img className="nav-logo" src={logo} />
+        <div className="name">Jordan Hudgens</div>
 
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/blog">Blog</Link>
+        <div className="nav-link-wrapper">
+          <Link to="/">Home</Link>
+        </div>
 
-      {isLoggedIn ? <a onClick={logout}>Logout</a> : null}
+        <div className="nav-link-wrapper">
+          <Link to="/about">About</Link>
+        </div>
+
+        <div className="nav-link-wrapper">
+          <Link to="/blog">Blog</Link>
+        </div>
+      </div>
+
+      {isLoggedIn ? (
+        <div className="right-side">
+          <a onClick={logout}>Logout</a>
+        </div>
+      ) : null}
     </div>
   );
 };
