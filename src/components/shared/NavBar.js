@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import AdminContext from "../../contexts/AdminContext";
 
@@ -15,15 +15,21 @@ export default () => {
         <div className="name">Jordan Hudgens</div>
 
         <div className="nav-link-wrapper">
-          <Link to="/">Home</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/">
+            Home
+          </NavLink>
         </div>
 
         <div className="nav-link-wrapper">
-          <Link to="/about">About</Link>
+          <NavLink activeClassName="active-nav-link" to="/about">
+            About
+          </NavLink>
         </div>
 
         <div className="nav-link-wrapper">
-          <Link to="/blog">Blog</Link>
+          <NavLink activeClassName="active-nav-link" to="/blog">
+            Blog
+          </NavLink>
         </div>
       </div>
 
