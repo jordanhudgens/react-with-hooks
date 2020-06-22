@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import AdminContext from "../../contexts/AdminContext";
 
@@ -35,7 +36,9 @@ export default () => {
 
       {isLoggedIn ? (
         <div className="right-side">
-          <a onClick={logout}>Logout</a>
+          <a onClick={logout}>
+            <FontAwesomeIcon icon="sign-out-alt" />
+          </a>
         </div>
       ) : null}
     </div>
