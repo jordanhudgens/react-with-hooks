@@ -19,6 +19,7 @@ export default (props) => {
   const logout = () => {
     setIsLoggedIn(false);
     localStorage.removeItem("devcamp_space_secure_token");
+    window.location.href = "/";
   };
 
   const checkLogin = (token) => {

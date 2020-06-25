@@ -1,5 +1,10 @@
 import React from "react";
+import DashboardLayout from "../components/layouts/DashboardLayout";
 
 export default () => {
-  return <h1>Blog form</h1>;
+  return (
+    <DashboardLayout>
+      <h1>Blog form</h1>
+    </DashboardLayout>
+  );
 };
