@@ -28,19 +28,28 @@ export default (props) => {
 
   const { banner_image_url, description, logo_url, name, url } = portfolioItem;
 
+  const bannerStyles = {
+    backgroundImage: "url(" + banner_image_url + ")",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backroundPosition: "center center",
+  };
+
+  const logoStyles = {
+    width: "200px",
+  };
+
   return (
     <DashboardLayout>
       <div className="portfolio-detail-wrapper">
-        <div>
-          <img src={logo_url} />
+        <div className="banner" style={bannerStyles}>
+          <img src={logo_url} style={logoStyles} />
         </div>
 
         <div className="portfolio-detail-description">{description}</div>
 
-        <h1>{banner_image_url}</h1>
-
         <div className="bottom-content-wrapper">
-          <a href={url} target="_blank">
+          <a className="site-link" href={url} target="_blank">
             Visit {name}
           </a>
         </div>
