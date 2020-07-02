@@ -1,0 +1,25 @@
+.portfolio-detail-wrapper {
+  width: 100vw;
+
+  .banner {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .portfolio-detail-description {
+    text-align: center;
+    margin-top: 42px;
+    font-size: 2rem;
+  }
+
+  .bottom-content-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+  }
+}
