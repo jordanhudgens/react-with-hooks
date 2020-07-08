@@ -50,7 +50,9 @@ export default (props) => {
         <div className="portfolio-detail-description">{description}</div>
 
         <div className="bottom-content-wrapper">
-          <Button>Visit {name}</Button>
+          <Button href={url} target="_blank" primary>
+            Visit {name}
+          </Button>
         </div>
       </div>
     </DashboardLayout>
