@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DashboardLayout from "../components/layouts/DashboardLayout";
 import Axios from "axios";
+import Button from "../components/shared/Button";
 
 export default (props) => {
   const [portfolioItem, setPortfolioItem] = useState(null);
@@ -49,9 +50,7 @@ export default (props) => {
         <div className="portfolio-detail-description">{description}</div>
 
         <div className="bottom-content-wrapper">
-          <a className="site-link" href={url} target="_blank">
-            Visit {name}
-          </a>
+          <Button>Visit {name}</Button>
         </div>
       </div>
     </DashboardLayout>
